@@ -477,7 +477,7 @@ template {
   color: #333333;
 }
 
-.breadcrump-list {
+.breadcrumb-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,17 +489,17 @@ template {
   list-style: none;
 }
 
-.breadcrump-list__item {
+.breadcrumb-list__item {
   font-size: 10px;
   line-height: 13px;
 }
 
-.breadcrump-list__item:not(:last-child)::after {
+.breadcrumb-list__item:not(:last-child)::after {
   content: '/';
   margin-right: 4px;
 }
 
-.breadcrump-list__link {
+.breadcrumb-list__link {
   text-decoration: none;
   color: inherit;
 }
