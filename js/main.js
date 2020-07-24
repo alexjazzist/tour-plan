@@ -1,4 +1,4 @@
-var mySwiper = new Swiper('.swiper-container', {
+var hotelSlider = new Swiper('.hotel-slider', {
   // Optional parameters
   loop: true,
   keyboard: {
@@ -8,10 +8,25 @@ var mySwiper = new Swiper('.swiper-container', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.slider-button__next',
-    prevEl: '.slider-button__prev',
+    nextEl: '.hotelslider__button__next',
+    prevEl: '.hotelslider__button__prev',
   },
   effect: "coverflow",
+})
+
+var reviewsSlider = new Swiper('.reviews-slider', {
+  // Optional parameters
+  loop: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews-slider__button__next',
+    prevEl: '.reviews-slider__button__prev',
+  },
 })
 
 
