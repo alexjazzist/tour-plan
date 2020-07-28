@@ -10,28 +10,27 @@
     margin-bottom: 70px
   &-slider
     &__item
+      position: relative
       display: flex
       flex-direction: column
       align-items: center
-      width: 730px
+      max-width: 730px
       margin: 45px auto 0
       background-color: #ffffff
       border-radius: 8px
-      margin-top: 45px
       padding: 0 62px 30px
-      position: relative
       &:before
-        content: ''
         position: absolute
+        content: ''
         background-image: url(../img/quote-left.svg)
         background-repeat: no-repeat
         width: 70px
         height: 47px
-        left: 60px
+        left: 62px
         top: 13px
       &:after
-        content: ''
         position: absolute
+        content: ''
         background-image: url(../img/quote-right.svg)
         background-repeat: no-repeat
         width: 70px
@@ -42,22 +41,22 @@
       position: absolute
       top: 50%
       transform: translateY(-50%)
-      width: 30px
       height: 30px
-      background-repeat: no-repeat
+      width: 30px
+      background-repeat: no-repeat 
       background-size: 10px
       background-position: center
       border: none
       outline: none
       background-color: transparent
       cursor: pointer
-      z-index: 10
-      &__prev
+      z-index: 99
+      &--prev
         background-image: url(../img/arrow-prev-secondary.svg)
         left: 0
-      &__next
+      &--next
         background-image: url(../img/arrow-next-secondary.svg)
-        right: 0
+        right: 0       
     &__profile
       display: flex
       flex-direction: column
@@ -95,6 +94,3 @@
       line-height: 160%
       text-align: justify
       margin: auto
-
-
-
