@@ -13,7 +13,7 @@ var hotelSlider = new Swiper('.hotel-slider', {
     prevEl: '.hotel-slider__button--prev',
   },
   effect: "coverflow",
-})
+});
 
 // slider
 
@@ -31,6 +31,15 @@ var reviewsSlider = new Swiper('.reviews-slider', {
     nextEl: '.reviews-slider__button--next',
     prevEl: '.reviews-slider__button--prev',
   },
-})
+});
+
+var menuButton = document.querySelector(".menu-button");
+menuButton.addEventListener("click", function name() {
+  console.log("click menu button");
+  document
+    .querySelector(".navbar-bottom")
+    .classList.toggle("navbar-bottom--visible");
+});
+
 
 
