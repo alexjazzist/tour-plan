@@ -5,10 +5,12 @@
   .hotel
     &-slider
       width: 590px
+      height: 450px
       &__image
         width: 100%
-        min-height: 100%
+        height: 100%
         object-fit: cover
+
   .card
     width: 230px
     height: 230px
@@ -18,8 +20,10 @@
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
+
   .logo
     width: 132px
+
   .navbar
     &-top
       padding-top: 30px
@@ -32,9 +36,11 @@
       &__link
         font-size: 12px
         line-height: 15px
+
   .search
     &__input
       width: 340px
+
   .hotel
     &-grid
       flex-direction: column
@@ -44,6 +50,7 @@
       width: 100%
     &-right
       flex-direction: row
+
   .booking
     width: 340px
   .map
@@ -154,6 +161,7 @@
 
   .stars
     flex-basis: auto
+
   .hotel
     &-name
       flex-basis: 100%
@@ -169,9 +177,7 @@
       &__offer
         order: -1
         margin-left: 0
-  .slider
-    height: 350px
-  .hotel
+
     &-right
       flex-direction: column
       min-height: 450px
@@ -180,6 +186,19 @@
     &__slider
       margin-bottom: 20px
       width: 100%
+
+  .slider
+    height: 350px
+
+  // .hotel
+  //   &-right
+  //     flex-direction: column
+  //     min-height: 450px
+  //   &-slider
+  //     height: 350px
+  //   &__slider
+  //     margin-bottom: 20px
+  //     width: 100%
   .booking
     width: 100%
   .map
@@ -219,18 +238,31 @@
   .footer
     &__input
       flex-basis: 100%
+  .modal
+    &__dialog
+      position: fixed
+      top: 50%
+      left: 50%
+      max-width: 478px
+      transform: translate(-50%, -50%)
+      padding: 33px 50px
+    &__info
+      font-size: 12px
 
 @media (max-width: 576px)
   .logo
     width: 99px
+
   .slider
     height: 250px
+
   .hotel
     &__slider
       margin-bottom: 20px
       width: 100%
     &-slider
       height: 250px
+
   .newsletter
     padding: 76px 0 76px 0
     &__title
@@ -270,8 +302,26 @@
       &-form
         grid-row: 7
         grid-column: 1
+  .modal
+    &__dialog
+      position: fixed
+      top: 50%
+      left: 50%
+      max-width: 478px
+      transform: translate(-50%, -50%)
+      padding: 25px 15px
+    &__info
+      font-size: 10px
 
   @media (max-width: 320px)
     .navbar
       &__search
         max-width: 245px
+    .modal
+      &__dialog
+        position: fixed
+        top: 50%
+        left: 50%
+        min-width: 300px
+        transform: translate(-50%, -50%)
+        padding: 33px 15px
