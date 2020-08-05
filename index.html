@@ -102,7 +102,7 @@
         </div>
         <!-- /.hotel-info__text -->
 
-        <div class="rating hotel-info__rating">
+        <div data-toggle="modal" data-href="#rating-modal" class="rating hotel-info__rating">
           <span class="rating__text">User Ratings</span>
           <span class="rating__counter">4.5/5</span>
         </div>
@@ -113,6 +113,7 @@
       <div class="hotel-grid">
 
         <div class="swiper-container hotel-slider hotel__slider">
+
           <div class="swiper-wrapper">
             <div class="swiper-slide hotel-slider__item">
               <img class="swiper-slide__image" src="img/slide-1.jpg" alt="slide 1">
@@ -132,6 +133,7 @@
             <div class="swiper-slide hotel-slider__item">
               <img class="swiper-slide__image" src="img/slide-6.jpg" alt="slide 6">
             </div>
+
           </div>
           <button class="hotel-slider__button hotel-slider__button--prev"></button>
           <button class="hotel-slider__button hotel-slider__button--next"></button>
@@ -173,7 +175,8 @@
             </div>
             <!-- /.booking__call-center -->
 
-            <button data-toggle="modal" class="button booking__button">View Other Options</button>
+            <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other
+              Options</button>
           </div>
           <!-- /.booking -->
 
@@ -410,10 +413,14 @@
         <!-- /.footer__contact-details -->
 
         <div class="footer__contact-form">
-          <h3 class=" footer__title footer__title--mb30">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-            <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+          <h3 class=" footer__title footer__title--mb-30">Send us a message</h3>
+          <form action="send.php" method="POST" class="footer__form form">
+            <div class="footer__input-group">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required>
+            </div>
+            <div class="footer__input-group">
+              <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone" required>
+            </div>
             <textarea class="message footer__message" cols="30" rows="6" placeholder="Message"
               name="message"></textarea>
             <button class="button footer__button" type="submit">Send</button>
@@ -428,7 +435,7 @@
     <!-- /.container -->
   </footer>
 
-  <div class="modal">
+  <div class="modal" id="booking-modal">
     <div class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
@@ -436,11 +443,29 @@
         <img src="img/close.svg" alt="icon: close">
       </a>
       <h3 class=" modal__title modal__title--mb30">booking</h3>
-      <form action="send.php" method="POST" class="modal__form">
-        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
-        <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
-        <input type="text" class="input modal__input" placeholder="Email*" name="email">
+      <form action="send.php" method="POST" class="modal__form form">
+        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2">
+        <input type="text" class="input modal__input" placeholder="Phone Number*" name="tel" required>
+        <input type="text" class="input modal__input" placeholder="Email*" name="email" required>
         <textarea class="message modal__message" cols="30" rows="6" placeholder="Message" name="message"></textarea>
+        <button class="button modal__button" type="submit">Send</button>
+        <span class="modal__info">* Required Fields</span>
+      </form>
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <div class="modal" id="rating-modal">
+    <div class="modal__overlay"></div>
+    <!-- /.modal__overlay -->
+    <div class="modal__dialog">
+      <a href="#" class="modal__close">
+        <img src="img/close.svg" alt="icon: close">
+      </a>
+      <h3 class=" modal__title modal__title--mb30">Send us a feedback</h3>
+      <form action="send.php" method="POST" class="modal__form form">
+        <input type="text" class="input modal__input" placeholder="rating*" name="rating" required>
         <button class="button modal__button" type="submit">Send</button>
         <span class="modal__info">* Required Fields</span>
       </form>
@@ -451,6 +476,10 @@
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- после jquery-3.5.1.min.js, до main.js -->
+  <script src="js/jquery.validate.min.js"></script>
+
   <script src="js/main.js"></script>
 </body>
 

@@ -2,6 +2,10 @@
   .container
     max-width: 960px
 
+  .slider
+    width: 590px
+    object-fit: cover
+
   .hotel
     &-slider
       width: 590px
@@ -14,8 +18,13 @@
   .card
     width: 230px
     height: 230px
+
   .footer
-    flex-basis: 100%
+
+    &__input
+      &-group
+
+        flex-basis: 100%
 
 @media (max-width: 992px)
   .container, .newsletter-wrapper
@@ -72,7 +81,8 @@
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
     &__input
-      flex-basis: 48%
+      &-group
+        flex-basis: 48%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
@@ -237,7 +247,8 @@
     height: 255px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
   .modal
     &__dialog
       position: fixed
